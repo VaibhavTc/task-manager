@@ -73,24 +73,27 @@ This will concurrently start:
 - Frontend: http://localhost:3000
 - Backend: http://localhost:5000
 
-## Database Integration
+# Database Models
 
-This project uses an in-memory array for data storage by default. To connect to a real database:
-
-1. Choose a database system (MongoDB, PostgreSQL, MySQL, etc.)
-2. Install the appropriate database driver
-3. Create connection logic in the `server/models/` directory
-4. Update the routes to use the database models instead of in-memory arrays
-
-## Production Build
-
+### User Model
 ```
-npm run build
+{
+  id: String (UUID),
+  email: String (unique),
+  password: String (hashed),
+  createdAt: Date
+}
 ```
 
-This creates a production build in the `dist` directory.
-
-## Notes
-
-- The current implementation uses in-memory arrays for data storage, which means data will be lost when the server restarts
-- For a production application, implement a proper database connection
+### Task Model
+```
+{
+  id: String (UUID),
+  title: String,
+  description: String,
+  completed: Boolean,
+  priority: Enum ('Low', 'Medium', 'High'),
+  createdAt: Date,
+  userId: String (foreign key to User)
+}
+```

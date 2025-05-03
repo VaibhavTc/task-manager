@@ -82,9 +82,6 @@ router.put("/:id", auth, async (req, res) => {
   }
 });
 
-// @route   PATCH api/tasks/:id/status
-// @desc    Toggle task completion status
-// @access  Private
 router.patch("/:id/status", auth, async (req, res) => {
   try {
     const task = await Task.findOne({ _id: req.params.id, userId: req.userId });

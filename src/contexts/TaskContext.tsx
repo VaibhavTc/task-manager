@@ -4,7 +4,7 @@ import { useAuth } from './AuthContext';
 import { toast } from 'react-toastify';
 
 export interface Task {
-  _id: string; // Changed from 'id' to '_id' to match MongoDB
+  _id: string; 
   title: string;
   description: string;
   completed: boolean;

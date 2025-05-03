@@ -91,7 +91,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       });
 
       toast.success('Registered and logged in successfully!');
-      // navigate('/dashboard'); 
     } catch (error: any) {
       toast.error(error.response?.data?.message || 'Registration failed');
       throw error;

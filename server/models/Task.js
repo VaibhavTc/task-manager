@@ -22,7 +22,7 @@ const taskSchema = new mongoose.Schema({
   },
   dueDate: {
     type: Date,
-    required: false, // Optional, remove if you want to make it mandatory
+    required: false, 
   },
   userId: {
     type: mongoose.Schema.Types.ObjectId,
@@ -35,7 +35,6 @@ const taskSchema = new mongoose.Schema({
   },
 });
 
-// Index for faster queries
 taskSchema.index({ userId: 1, completed: 1 });
 taskSchema.index({ userId: 1, priority: 1 });
 taskSchema.index({ userId: 1, createdAt: -1 });

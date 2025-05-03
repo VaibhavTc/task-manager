@@ -19,7 +19,6 @@ export function useForm<T extends Record<string, any>>({
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
     
-    // Handle checkbox inputs
     if (type === 'checkbox') {
       const checkbox = e.target as HTMLInputElement;
       setValues({ ...values, [name]: checkbox.checked });
@@ -27,7 +26,7 @@ export function useForm<T extends Record<string, any>>({
       setValues({ ...values, [name]: value });
     }
     
-    // Clear error when field is edited
+
     if (errors[name as keyof T]) {
       setErrors({ ...errors, [name]: '' });
     }
@@ -50,9 +49,7 @@ export function useForm<T extends Record<string, any>>({
       const validationErrors = validate(values);
       setErrors(validationErrors);
       
-      // If there are validation errors, don't submit
       if (Object.keys(validationErrors).length > 0) {
-        // Mark all fields as touched to show errors
         const allTouched = Object.keys(values).reduce(
           (acc, key) => ({ ...acc, [key]: true }),
           {} as Partial<Record<keyof T, boolean>>
@@ -66,7 +63,6 @@ export function useForm<T extends Record<string, any>>({
     try {
       await onSubmit(values);
     } catch (error) {
-      // Error handling is done in the onSubmit function
     } finally {
       setIsSubmitting(false);
     }

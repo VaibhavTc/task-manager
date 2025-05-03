@@ -23,7 +23,7 @@ const TaskCard: React.FC<TaskCardProps> = ({ task, onToggleStatus, onDelete, onU
   };
 
   const handleUpdateTask = async () => {
-    if (editedTitle.trim() === '' || !task._id) return; // Add check for task ID
+    if (editedTitle.trim() === '' || !task._id) return; 
 
     await onUpdate(task._id, {
       title: editedTitle,
