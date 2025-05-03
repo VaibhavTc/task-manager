@@ -67,6 +67,7 @@ You can log in using the following seeded demo account:
    ```
    JWT_SECRET=your_secret_key
    PORT=5000
+   MONGODB_URI=your_db_url
    ```
 
 ### Running the Application
