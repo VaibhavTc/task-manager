@@ -78,27 +78,5 @@ npm run dev
 ```
 
 This will concurrently start:
-- Frontend: http://localhost:3000
+- Frontend: http://localhost:5173
 - Backend: http://localhost:5000
-
-## Database Integration
-
-This project uses an in-memory array for data storage by default. To connect to a real database:
-
-1. Choose a database system (MongoDB, PostgreSQL, MySQL, etc.)
-2. Install the appropriate database driver
-3. Create connection logic in the `server/models/` directory
-4. Update the routes to use the database models instead of in-memory arrays
-
-## Production Build
-
-```
-npm run build
-```
-
-This creates a production build in the `dist` directory.
-
-## Notes
-
-- The current implementation uses in-memory arrays for data storage, which means data will be lost when the server restarts
-- For a production application, implement a proper database connection
