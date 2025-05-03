@@ -25,6 +25,9 @@ A full-stack task management application built with React, Node.js, and Express.
 - JWT authentication
 - RESTful API
 
+### Seed the user
+Seeding the user as soon as index.js is run (only when there is no user present already)
+
 ### Demo User Credentials
 
 You can log in using the following seeded demo account:
