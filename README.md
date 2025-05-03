@@ -25,6 +25,16 @@ A full-stack task management application built with React, Node.js, and Express.
 - JWT authentication
 - RESTful API
 
+### Seed the user
+Seeding the user as soon as index.js is run (only when there is no user present already)
+
+### Demo User Credentials
+
+You can log in using the following seeded demo account:
+   ```
+   Email: demo@example.com  
+   Password: demo123
+   ```
 ## Project Structure
 
 ```
@@ -60,6 +70,7 @@ A full-stack task management application built with React, Node.js, and Express.
    ```
    JWT_SECRET=your_secret_key
    PORT=5000
+   MONGODB_URI=your_db_url
    ```
 
 ### Running the Application
@@ -70,8 +81,9 @@ npm run dev
 ```
 
 This will concurrently start:
-- Frontend: http://localhost:3000
+- Frontend: http://localhost:5173
 - Backend: http://localhost:5000
+<<<<<<< HEAD
 
 # Database Models
 
@@ -97,3 +109,5 @@ This will concurrently start:
   userId: String (foreign key to User)
 }
 ```
+=======
+>>>>>>> 634db155d0bf46b361636a3ce6ac510c8343990d
