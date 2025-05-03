@@ -25,6 +25,13 @@ A full-stack task management application built with React, Node.js, and Express.
 - JWT authentication
 - RESTful API
 
+### Demo User Credentials
+
+You can log in using the following seeded demo account:
+   ```
+   Email: demo@example.com  
+   Password: demo123
+   ```
 ## Project Structure
 
 ```
